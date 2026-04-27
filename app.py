@@ -576,7 +576,11 @@ def api_start():
         "key": None,
     }
     set_session(sid, sess)
-    target = step_url(sid, 1, method, duration)
+    if total_steps <= 1:
+        new_key = ensure_key_for_session(sess, sid)
+        target = done_url(sid, new_key)
+    else:
+        target = step_url(sid, 1, method, duration)
     short = build_short_link(method, target)
     if not short:
         return jsonify({"status": "error", "message": "failed to create short link"}), 500
@@ -618,11 +622,19 @@ def api_continue():
     sess["step"] = step
     sess["lastStepTime"] = now_ts()
     set_session(sid, sess)
-    target = step_url(sid, step + 1, sess.get("method", "linkvertise"), sess.get("duration", "24hours"))
-    short = build_short_link(sess.get("method", "linkvertise"), target)
+    method = sess.get("method", "linkvertise")
+    duration = sess.get("duration", "24hours")
+    if step + 1 >= total:
+        new_key = ensure_key_for_session(sess, sid)
+        target = done_url(sid, new_key)
+        is_final = True
+    else:
+        target = step_url(sid, step + 1, method, duration)
+        is_final = False
+    short = build_short_link(method, target)
     if not short:
         return jsonify({"status": "error", "message": "failed to create short link"}), 500
-    return jsonify({"status": "ok", "step": step, "shortUrl": short})
+    return jsonify({"status": "ok", "step": step, "isFinal": is_final, "shortUrl": short})
 
 @app.route("/api/v1/auth/getkey", methods=["GET"])
 def api_check():
