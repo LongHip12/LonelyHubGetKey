@@ -44,8 +44,9 @@
     });
   });
 
+  const hasMethodPicker = document.querySelector('.method-btn');
   const cont = document.getElementById('continueBtn');
-  if (cont) {
+  if (cont && hasMethodPicker && !cont.dataset.noGlobal) {
     cont.addEventListener('click',()=>{
       cont.classList.add('btn-loading');
       window.location.href = `/verify?method=${method}`;
