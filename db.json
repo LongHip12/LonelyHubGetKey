@@ -1,0 +1,81 @@
+{
+  "sessions": {
+    "deXfvhGkNo3Rq9Lda8cHttI2di-UT3As": {
+      "createdAt": 1777253918101,
+      "ip": "127.0.0.1",
+      "ua": "curl/8.14.1",
+      "purpose": "reset_hwid",
+      "resetTargetKey": "LonelyHub-test-key-001",
+      "verified": {
+        "cloudflare": true,
+        "hcaptcha": true
+      },
+      "step": 0,
+      "flag": "ok",
+      "resetUsed": true,
+      "resetCompletedAt": 1777253918676
+    },
+    "5a2c7e2f629419a49fabb5bf2aa3cae1": {
+      "sessionId": "5a2c7e2f629419a49fabb5bf2aa3cae1",
+      "userId": "user_38cb67cd5b99",
+      "hwid": "hwid_d9wymnszj6mogkkbby",
+      "ip": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36",
+      "startTime": 1777270140294,
+      "lastStepTime": 1777270140294,
+      "step": 0,
+      "flag": "ok",
+      "blockedUntil": 0,
+      "duration": "24hours",
+      "method": "linkvertise",
+      "verified": {
+        "cloudflare": false,
+        "hcaptcha": false
+      }
+    },
+    "32dd3e58d7860198154907a69f635fad": {
+      "sessionId": "32dd3e58d7860198154907a69f635fad",
+      "userId": "user_c223eadb033e",
+      "hwid": "hwid_d9wymnszj6mogkkbby",
+      "ip": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36",
+      "startTime": 1777270163318,
+      "lastStepTime": 1777270163318,
+      "step": 0,
+      "flag": "ok",
+      "blockedUntil": 0,
+      "duration": "24hours",
+      "method": "linkvertise",
+      "verified": {
+        "cloudflare": false,
+        "hcaptcha": false
+      }
+    },
+    "fb923864f95f92762dd66ffe2ac4150a": {
+      "sessionId": "fb923864f95f92762dd66ffe2ac4150a",
+      "userId": "user_3ac0569f8cc9",
+      "hwid": "hwid_a60bq0k7lhmogv1u5y",
+      "ip": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36",
+      "startTime": 1777273998871,
+      "lastStepTime": 1777273998871,
+      "step": 0,
+      "flag": "bypass_detected",
+      "blockedUntil": 1777281200260,
+      "duration": "24hours",
+      "method": "linkvertise",
+      "verified": {
+        "cloudflare": false,
+        "hcaptcha": false
+      }
+    }
+  },
+  "blocked": {},
+  "admin_sessions": {
+    "027c221b4e3e11da836ae5328180cf30577794506820ecff": {
+      "createdAt": 1777277312085,
+      "expireAt": 1777277612085,
+      "ip": "127.0.0.1"
+    }
+  }
+}
