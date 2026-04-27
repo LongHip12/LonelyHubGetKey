@@ -1,2 +1,2 @@
 # LonelyHubGetKey
-Upload Auto By Script
+Auto Upload Auto By Script
